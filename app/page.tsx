@@ -39,10 +39,11 @@ export default function Home() {
   return (
     <main>
       <div className="card">
-        <h1>Rejoins la liste</h1>
+        <span className="badge">Bientôt disponible</span>
+        <h1>Sois le premier informé</h1>
         <p className="subtitle">
-          Laisse ton nom et ton email pour recevoir nos prochaines actualités.
-          C&apos;est simple, rapide et sans spam.
+          Rejoins la liste d&apos;attente et reçois un accès prioritaire dès le
+          lancement. Pas de spam, juste l&apos;essentiel.
         </p>
 
         <form onSubmit={handleSubmit} noValidate={false}>
@@ -74,8 +75,13 @@ export default function Home() {
           </label>
 
           <button type="submit" disabled={status === "loading"}>
-            {status === "loading" ? "Envoi..." : "Envoyer"}
+            {status === "loading" ? "Envoi..." : "Rejoindre la liste"}
           </button>
+
+          <p className="legal">
+            En soumettant, tu acceptes que tes informations soient utilisées
+            uniquement pour te recontacter.
+          </p>
         </form>
 
         {status === "success" && (

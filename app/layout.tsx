@@ -1,9 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Landing | Inscription",
-  description: "Landing page simple avec formulaire connecté à Google Sheets.",
+  title: "Rejoins la liste d'attente",
+  description:
+    "Inscris-toi pour être informé en avant-première de notre lancement.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#0f172a",
 };
 
 export default function RootLayout({
