@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -38,8 +39,8 @@ export default function Home() {
 
   return (
     <main>
+      <ThemeToggle />
       <div className="card">
-        <span className="badge">Bientôt disponible</span>
         <h1>Sois le premier informé</h1>
         <p className="subtitle">
           Rejoins la liste d&apos;attente et reçois un accès prioritaire dès le
